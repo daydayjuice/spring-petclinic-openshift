@@ -15,6 +15,10 @@
   <name>petclinic</name>
 
   <properties>
+    <!-- SonarQube -->
+    <sonar.projectKey>yuhu-petclinic</sonar.projectKey>
+    <sonar.host.url>http://sonarqube-sonarqube.apps.sd205.openshift-mc.link</sonar.host.url>
+    <sonar.login>1d2d9397e1d918fe67a237cf34078754558b62cd</sonar.login>
 
     <!-- Generic properties -->
     <java.version>1.8</java.version>
@@ -135,6 +139,11 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.8.0.2131</version>
+      </plugin>
       <plugin>
         <groupId>io.spring.javaformat</groupId>
         <artifactId>spring-javaformat-maven-plugin</artifactId>
